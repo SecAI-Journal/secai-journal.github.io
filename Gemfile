@@ -15,5 +15,8 @@ platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo-data"
 end
 
-gem "wdm", "~> 0.1.1", :platforms => [:mingw, :x64_mingw, :mswin]
-gem "http_parser.rb", "~> 0.6.0", :platforms => :jruby
+# UPDATED: Using 0.2.0 for Ruby 3.4 compatibility
+gem "wdm", ">= 0.2.0", :platforms => [:mingw, :x64_mingw, :mswin]
+
+# Optional: If you encounter an error with 'webrick' (common in Ruby 3.0+)
+gem "webrick", "~> 1.8"
