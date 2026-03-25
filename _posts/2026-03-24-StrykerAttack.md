@@ -1,12 +1,12 @@
 ---
-title: STRYKER ATTACK 
+title: Stryker Attack 
 date: 2026-03-24 12:00:00 +0100
 categories: [Meta]
 tags: [security]
 author: [erica_malafronte, secai_team]
 pin: false 
 image:
-  path: assets\img\posts\coverimages\StrykerAttackCoverImage.jpg # optional header image
+  path: /assets/img/posts/coverimages/StrykerAttackCoverImage.jpg
 ---
 
 CISA is urging organizations to secure Microsoft Intune environments after attackers used it to wipe nearly 80,000 devices in the Stryker cyberattack.
@@ -18,7 +18,7 @@ On March 11, 2026, the American medical technology giant Stryker Corporation bec
 
 The attack, claimed by the Iranian group Handala (also known as Void Manticore or Storm-842), caused a global operational paralysis,  affecting critical infrastructures in 79 countries.
 
-![strikerattack](assets\img\posts\stryker-attack\strikerattack.png)
+![strikerattack](/assets/img/posts/stryker-attack/strikerattack.png)
 
 **Geopolitical context and retaliation**
 
@@ -55,10 +55,10 @@ To maximize the damage, Handala simultaneously employed several destructive meth
 
 The impact was catastrophic:
 
-**Data Loss:** Handala claimed to have erased data from over 200,000 systems, including servers and mobile devices, and to have exfiltrated 50 terabytes of critical data. The group also threatened to publicly release the data, stating that the goal is to expose what it describes as “injustice and corruption.”
+**Data Loss:** Handala claimed to have erased data from over 200,000 systems, including servers and mobile devices, and to have exfiltrated 50 terabytes of critical data. The group also threatened to publicly release the data, stating that the goal is to expose what it describes as “injustice and corruption.”\
 **Work Paralysis:** In Ireland, more than 5,000 employees were sent home due to total network inaccessibility.
-The login pages of the remaining active devices were defaced with the Handala logo.
-**Economic Impact:** Stryker Corporation’s stock dropped by approximately 3.6% on the same day.
+The login pages of the remaining active devices were defaced with the Handala logo.\
+**Economic Impact:** Stryker Corporation’s stock dropped by approximately 3.6% on the same day.\
 **Disruption of Medical Services:** The attack disabled the LifeNet platform in several regions, including Maryland, where the system went offline across much of the territory. LifeNet is used to transmit real-time electrocardiograms (ECGs) from paramedics to hospitals.
 Emergency medical personnel were instructed to resort to radio consultations, verbally describing ECG results to the receiving doctors.
 
