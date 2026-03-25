@@ -43,7 +43,7 @@ The operation did not exploit any zero-day vulnerabilities but instead targeted 
 
 As a result of this action, the phones removed not only corporate applications, but also performed a complete operating system reset, deleting personal photos, banking apps, and even cellular eSIMs, leaving many users unable to use two-factor authentication (2FA) for their personal accounts.
 
-![attackchain][def]
+![attackchain](assets\img\posts\stryker-attack\strykerattackchain.jpg)
 
 Sources indicate that **more than 200,000 systems, including servers and mobile devices across 79 countries**, were affected by this attack.
 
