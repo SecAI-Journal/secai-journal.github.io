@@ -12,7 +12,7 @@ lang: en
 timezone: Europe/Madrid
 
 title: SecAI Journal
-tagline: Security & AI — Research, Tools, and Thoughts
+tagline: Security & AI - Research, Tools, and Thoughts
 description: >-
   A personal journal exploring the intersection of cybersecurity and artificial intelligence.
   CTF writeups, research notes, tool reviews, and AI-powered security techniques.

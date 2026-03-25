@@ -1,0 +1,5 @@
+# _data/locales/en.yml
+
+en:
+  post:
+    by: "Author"

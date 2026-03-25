@@ -1,12 +1,11 @@
 ---
-title: "Post Title"
+title: "DATA POISONING IN DIGITAL FORENSICS"
 date: 2026-03-24 12:00:00 +0100
 categories: [Category, Subcategory]   # e.g. [CTF, HackTheBox] or [Research, Malware]
-tags: [tag1, tag2, tag3]              # lowercase, e.g. [linux, privesc, llm]
+tags: [articial intelligence]              # lowercase, e.g. [linux, privesc, llm]
 pin: false                            # true to pin post to top of homepage
 image:
-  path: /assets/img/posts/What-is-Data-Poisoning-All-You-Need-to-Know.png  # optional header image
-  alt: Image description
+  path: assets\img\posts\coverimages\DataPoisoningCoverImage.png  # optional header image
 ---
 
 ## Introduction
