@@ -1,14 +1,14 @@
 ---
 title: "Data Poisoning in Digital Forensics: a growing threat to evidences’s integrity"
 date: 2026-03-24 12:00:00 +0100
-categories: [Category, Subcategory]   # e.g. [CTF, HackTheBox] or [Research, Malware]
-tags: [articial intelligence]              # lowercase, e.g. [linux, privesc, llm]
-pin: false                            # true to pin post to top of homepage
+tags: [articial intelligence, security]    
+author: [secai_team]          
+pin: false                           
 image:
-  path: assets\img\posts\coverimages\DataPoisoningCoverImage.png  # optional header image
+  path: /assets/img/posts/coverimages/DataPoisoningCoverImage.png
 ---
 
-Digital forensics plays a crucial role in reconstructing digital events, attributing responsibility, and collecting legally admissible evidence. The entire value of a digital forensic investigation depends on the integrity of the collected data: if this data is manipulated, the reliability of the results can be severely compromised. In this context, data poisoning emerges as a significant threat, especially for investigations that rely on artificial intelligence (AI) and machine learning (ML) models.
+**Digital forensics** plays a crucial role in reconstructing digital events, attributing responsibility, and collecting legally admissible evidence. The entire value of a digital forensic investigation depends on the integrity of the collected data: if this data is manipulated, the reliability of the results can be severely compromised. In this context, data poisoning emerges as a significant threat, especially for investigations that rely on artificial intelligence (AI) and machine learning (ML) models.
 
 **What is Data Poisoning?**
 
@@ -16,15 +16,14 @@ Data poisoning is a **type of cyber attack** in which attackers **manipulate or 
 This is particularly dangerous for forensic investigations that rely on machine learning to analyze malware signatures, perform intrusion detection, or correlate events across multiple data sources.
 Once the training data is compromised, the model may make incorrect decisions or even be driven by malicious intent.
 
-
 **The importance of Data Poisoning in Digital Forensics**
 
-In digital forensics, various automated tools are used to analyze large volumes of data, such as logs, network traffic, or file samples, to identify malicious behavior and attribute responsibility. \
+In digital forensics, various automated tools are used to analyze large volumes of data, such as logs, network traffic, or file samples, to identify malicious behavior and attribute responsibility.\
 If these tools are compromised through data poisoning, a forensic investigator may encounter false positives or fail to detect real threats.\
 Even worse, if these manipulations remain undetected, legal proceedings can be undermined, and criminals may escape justice.
 
-Consider a scenario where a forensic tool used by law enforcement is trained on a dataset of known malicious programs (malware) and benign software. \
-If an attacker poisons this dataset by systematically altering labels or injecting malicious code disguised as benign, the model will suffer degradation that may lead it to generate incorrect classifications.
+Consider a scenario where a forensic tool used by law enforcement is trained on a dataset of known malicious programs (malware) and benign software.\
+If an attacker poisons this dataset by systematically **altering labels** or **injecting malicious** code disguised as benign, the model will suffer degradation that may lead it to generate incorrect classifications.
 
 Investigators relying on this compromised model could inadvertently allow harmful artifacts to pass through. This highlights why data integrity and source reliability are fundamental in any digital investigation.
 
@@ -65,7 +64,7 @@ The objective is to examine the model itself to identify signs of poisoning, ove
 
 ---
 
-Data poisoning represents a serious threat to the integrity of digital forensics investigations, particularly in a context where reliance on artificial intelligence and machine learning models is steadily increasing. The ability to manipulate training data to compromise the reliability and accuracy of model decisions necessitates the adoption of effective preventive measures, including secure data management practices, rigorous dataset verification, and the use of advanced security tools.\
+**Data poisoning** represents a serious threat to the integrity of digital forensics investigations, particularly in a context where reliance on artificial intelligence and machine learning models is steadily increasing. The ability to manipulate training data to compromise the reliability and accuracy of model decisions necessitates the adoption of effective preventive measures, including secure data management practices, rigorous dataset verification, and the use of advanced security tools.\
 
 The research and development of innovative forensic frameworks for data poisoning detection, such as those based on topological analysis, Shapley values, and Benford's Law represent a fundamental step to ensure the validity and reliability of digital evidence in the ever-evolving landscape of cyber threats.
 
