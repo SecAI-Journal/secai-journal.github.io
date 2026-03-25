@@ -43,6 +43,8 @@ The operation did not exploit any zero-day vulnerabilities but instead targeted 
 
 As a result of this action, the phones removed not only corporate applications, but also performed a complete operating system reset, deleting personal photos, banking apps, and even cellular eSIMs, leaving many users unable to use two-factor authentication (2FA) for their personal accounts.
 
+![attackchain][def]
+
 Sources indicate that **more than 200,000 systems, including servers and mobile devices across 79 countries**, were affected by this attack.
 
 To maximize the damage, Handala simultaneously employed several destructive methods:
@@ -55,12 +57,14 @@ To maximize the damage, Handala simultaneously employed several destructive meth
 
 The impact was catastrophic:
 
-**Data Loss:** Handala claimed to have erased data from over 200,000 systems, including servers and mobile devices, and to have exfiltrated 50 terabytes of critical data. The group also threatened to publicly release the data, stating that the goal is to expose what it describes as “injustice and corruption.”\
-**Work Paralysis:** In Ireland, more than 5,000 employees were sent home due to total network inaccessibility.
+- **Data Loss:** Handala claimed to have erased data from over 200,000 systems, including servers and mobile devices, and to have exfiltrated 50 terabytes of critical data. The group also threatened to publicly release the data, stating that the goal is to expose what it describes as “injustice and corruption.”\
+- **Work Paralysis:** In Ireland, more than 5,000 employees were sent home due to total network inaccessibility.
 The login pages of the remaining active devices were defaced with the Handala logo.\
-**Economic Impact:** Stryker Corporation’s stock dropped by approximately 3.6% on the same day.\
-**Disruption of Medical Services:** The attack disabled the LifeNet platform in several regions, including Maryland, where the system went offline across much of the territory. LifeNet is used to transmit real-time electrocardiograms (ECGs) from paramedics to hospitals.
+- **Economic Impact:** Stryker Corporation’s stock dropped by approximately 3.6% on the same day.\
+- **Disruption of Medical Services:** The attack disabled the LifeNet platform in several regions, including Maryland, where the system went offline across much of the territory. LifeNet is used to transmit real-time electrocardiograms (ECGs) from paramedics to hospitals.
 Emergency medical personnel were instructed to resort to radio consultations, verbally describing ECG results to the receiving doctors.
+
+---
 
 The Handala group’s attack against Stryker Corporation highlighted how the **cloud management plane** has become the **new critical perimeter of corporate security**.
 
@@ -81,5 +85,6 @@ A **strong and proactive security governance** is therefore a necessary conditio
 
 ---
 
-Author: Erica Malafronte 
-| *Cybersecurity Analyst*
+All rights reserved
+
+[def]: assets\img\posts\stryker-attack\strykerattackchain.jpg
