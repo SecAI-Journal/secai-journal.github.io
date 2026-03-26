@@ -1,7 +1,6 @@
 ---
 title: Stryker Attack 
 date: 2026-03-24 12:00:00 +0100
-categories: [Meta]
 tags: [security]
 author: [erica_malafronte, secai_team]
 pin: false 

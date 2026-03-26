@@ -2,7 +2,7 @@
 title: "Data Poisoning in Digital Forensics: a growing threat to evidences’s integrity"
 date: 2026-03-24 12:00:00 +0100
 tags: [articial intelligence, security]    
-author: [secai_team]          
+author: [erica_malafronte, david_cardoner, secai_team]          
 pin: false                           
 image:
   path: /assets/img/posts/coverimages/DataPoisoningCoverImage.png
