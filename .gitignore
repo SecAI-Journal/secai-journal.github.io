@@ -5,3 +5,6 @@ _site/
 vendor/
 Gemfile.lock
 .bundle/
+
+# DS Store
+**/.DS_Store
