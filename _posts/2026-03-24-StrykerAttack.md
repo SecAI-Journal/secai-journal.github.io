@@ -85,5 +85,3 @@ A **strong and proactive security governance** is therefore a necessary conditio
 ---
 
 All rights reserved
-
-[def]: /assets/img/posts/stryker-attack/strykerattackchain.jpg
