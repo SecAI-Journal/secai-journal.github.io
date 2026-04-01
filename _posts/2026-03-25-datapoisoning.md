@@ -10,13 +10,13 @@ image:
 
 **Digital forensics** plays a crucial role in reconstructing digital events, attributing responsibility, and collecting legally admissible evidence. The entire value of a digital forensic investigation depends on the integrity of the collected data: if this data is manipulated, the reliability of the results can be severely compromised. In this context, data poisoning emerges as a significant threat, especially for investigations that rely on artificial intelligence (AI) and machine learning (ML) models.
 
-**What is Data Poisoning?**
+## **What is Data Poisoning?**
 
 Data poisoning is a **type of cyber attack** in which attackers **manipulate or corrupt the training data used to develop machine learning (ML) or artificial intelligence (AI) models**.
 This is particularly dangerous for forensic investigations that rely on machine learning to analyze malware signatures, perform intrusion detection, or correlate events across multiple data sources.
 Once the training data is compromised, the model may make incorrect decisions or even be driven by malicious intent.
 
-**The importance of Data Poisoning in Digital Forensics**
+## **The importance of Data Poisoning in Digital Forensics**
 
 In digital forensics, various automated tools are used to analyze large volumes of data, such as logs, network traffic, or file samples, to identify malicious behavior and attribute responsibility.\
 If these tools are compromised through data poisoning, a forensic investigator may encounter false positives or fail to detect real threats.\
@@ -27,7 +27,7 @@ If an attacker poisons this dataset by systematically **altering labels** or **i
 
 Investigators relying on this compromised model could inadvertently allow harmful artifacts to pass through. This highlights why data integrity and source reliability are fundamental in any digital investigation.
 
-**Types of Data Poisoning**
+## **Types of Data Poisoning**
 
 We can distinguish two main categories of data poisoning: **non-targeted and targeted**.
 
@@ -48,7 +48,7 @@ During the deployment, when an image containing the trigger is presented to the 
 
 ![catbackdoor](/assets/img/posts/stryker-attack/datapoisoningbackdoor.png)
 
-**Detection of Data Poisoning**
+## **Detection of Data Poisoning**
 
 Detecting data poisoning is a complex challenge, given the often insidious nature of such manipulations. However, several strategies and tools exist to mitigate the risk.
 A more advanced approach is represented by a forensic analysis framework for detecting data poisoning in machine learning models.

@@ -5,7 +5,7 @@ order: 4
 ---
 
 This space is dedicated to **exploring the technologies behind today’s digital world**,
-with a strong focus on **Artificial Intelligence and Cybersecurity**.🤖🔐
+with a strong focus on **Artificial Intelligence** and **Cybersecurity**. 🤖
 
 Our goal is to share **clear**, **practical**, and **trustworthy insights** into the tools, discoveries, and trends driving innovation.
 
@@ -25,7 +25,7 @@ This project is **open to contributors**.
 If you’d like to share your expertise, feel free to submit your work at\
 📩 **secaijournal@gmail.com**. 
 
-Be part of a space where **innovation meets awareness**, and where knowledge helps create a safer digital future. 🚀
+Be part of a space where **innovation meets awareness**, and where knowledge helps create a safer digital future.🚀
 
 ---
 

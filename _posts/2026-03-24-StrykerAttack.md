@@ -1,48 +1,47 @@
 ---
-title: Stryker Attack 
+title: Handala’s attack and the strategic sabotage of Microsoft Intune
 date: 2026-03-24 12:00:00 +0100
 tags: [security]
 author: [erica_malafronte, secai_team]
 pin: false 
 image:
-  path: /assets/img/posts/coverimages/StrykerAttackCoverImage.jpg
+  path: assets/img/posts/coverimages/StrykerAttackCoverImage.jpg 
 ---
 
 CISA is urging organizations to secure Microsoft Intune environments after attackers used it to wipe nearly 80,000 devices in the Stryker cyberattack.
 
 But what happened?
-## The cloud as a weapon: Handala’s attack and the strategic sabotage of Microsoft Intune
 
-On March 11, 2026, the American medical technology giant Stryker Corporation became the target of one of the largest and most destructive cyber sabotage operations ever recorded.
+➤ On March 11, 2026, the American medical technology giant Stryker Corporation became the target of **one of the largest and most destructive cyber sabotage operations ever recorded**.
 
-The attack, claimed by the Iranian group Handala (also known as Void Manticore or Storm-842), caused a global operational paralysis,  affecting critical infrastructures in 79 countries.
+The attack, claimed by the **Iranian group Handala** (also known as Void Manticore or Storm-842), caused a global operational paralysis,  affecting critical infrastructures in **79 countries**.
 
 ![strikerattack](/assets/img/posts/stryker-attack/strikerattack.png)
 
-**Geopolitical context and retaliation**
+## **Geopolitical context and retaliation**
 
-The Handala Hack group (also known as Void Manticore or Storm-0842), an actor linked to the Iranian Ministry of Intelligence and Security (MOIS), stated that the operation was a direct retaliation for a U.S. missile strike on February 28, 2026, against a girls’ school in Minab, Iran, which allegedly caused 175 casualties.
+The Handala Hack group (also known as Void Manticore or Storm-0842), an actor linked to the Iranian Ministry of Intelligence and Security (MOIS), stated that the operation was a **direct retaliation for a U.S. missile strike** on February 28, 2026, against a girls’ school in Minab, Iran, which allegedly caused 175 casualties.
 
 Stryker Corporation was targeted not only for its economic significance ($25 billion in sales), but also for its $450 million contracts with the U.S. Department of Defense and its ties to Israel.
 
-**Technical analysis: how Microsoft Intune works**
+## **Technical analysis: how Microsoft Intune works**
 
-To understand the scope of the sabotage, it is necessary to analyze how Microsoft Intune works. It is a cloud-based Mobile Device Management (MDM) service that acts as a configuration delivery center for IT departments.
+To understand the scope of the sabotage, it is necessary to analyze how **Microsoft Intune** works. It is a cloud-based Mobile Device Management (MDM) service that acts as a configuration delivery center for IT departments.
 
-Through BYOD (Bring Your Own Device) policies, companies require employees to enroll their personal devices to access corporate resources such as email or Teams.
+Through **BYOD (Bring Your Own Device)** policies, companies require employees to enroll their personal devices to access corporate resources such as email or Teams.
 This grants the IT department administrative oversight of the device.
-One of Intune’s standard features is “Wipe”: an emergency switch designed to restore a lost or stolen device to factory settings.
+One of Intune’s standard features is **“Wipe”**: an emergency switch designed to restore a lost or stolen device to factory settings.
 
-**Attack chain**
+## **Attack chain**
 
 The operation did not exploit any zero-day vulnerabilities but instead targeted the weakest point: digital identity.
 
-- **Wiper Execution**: Instead of deploying a virus, the hackers simply selected all registered devices and activated the legitimate “Wipe” command simultaneously.
+- **Wiper Execution**: Instead of deploying a virus, the hackers simply selected all registered devices and activated the **legitimate “Wipe” command simultaneously**.
 - **Operating System Response**: When an iPhone or Android device receives a wipe command from its trusted MDM server, the operating system immediately and unconditionally obeys, initiating a complete factory reset.
 
-As a result of this action, the phones removed not only corporate applications, but also performed a complete operating system reset, deleting personal photos, banking apps, and even cellular eSIMs, leaving many users unable to use two-factor authentication (2FA) for their personal accounts.
+As a result of this action, the phones removed not only corporate applications, but also performed a **complete operating system reset**, deleting personal photos, banking apps, and even cellular eSIMs, leaving many users unable to use two-factor authentication (2FA) for their personal accounts.
 
-![attackchain](assets\img\posts\stryker-attack\strykerattackchain.jpg)
+![attackchain](assets/img/posts/stryker-attack/strykerattackchain.jpg)
 
 Sources indicate that **more than 200,000 systems, including servers and mobile devices across 79 countries**, were affected by this attack.
 
@@ -52,7 +51,7 @@ To maximize the damage, Handala simultaneously employed several destructive meth
 - **PowerShell and Artificial Intelligence**: An additional PowerShell-based wiper, likely developed with AI assistance, was deployed. It was capable of enumerating and recursively deleting all user directories.
 - **VeraCrypt Encryption and RDP**: For the systems that survived, the attackers used VeraCrypt to encrypt drives and leveraged Remote Desktop Protocol (RDP) access to manually delete virtual machines (VMs) from virtualization platforms.
 
-**Global impact and operational consequences**
+## **Global impact and operational consequences**
 
 The impact was catastrophic:
 
