@@ -1,6 +1,6 @@
 ---
 title: Handala’s attack and the strategic sabotage of Microsoft Intune
-date: 2026-03-24 12:00:00 +0100
+date: 2026-03-20 12:00:00 +0100
 tags: [security]
 categories: [Threats and Attacks]
 author: [erica_malafronte, secai_team]
