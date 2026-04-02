@@ -2,6 +2,7 @@
 title: FBI and CISA Warn of Russian Espionage Targeting Signal and WhatsApp
 date: 2026-03-26 12:00:00 +0100
 tags: [security]
+categories: [Threats and Attacks]
 author: [erica_malafronte, secai_team]
 pin: false 
 image:
