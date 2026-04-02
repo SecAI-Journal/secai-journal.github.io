@@ -1,8 +1,9 @@
 ---
 title: TurboQuant Google’s AI Memory Compression Breakthrough
 date: 2026-03-31 12:00:00 +0100
+categories: [Trends and Technologies]
 tags: [ai, research]
-author: [secai_team]
+author: [david_cardoner, secai_team]
 pin: false
 math: true
 image:
