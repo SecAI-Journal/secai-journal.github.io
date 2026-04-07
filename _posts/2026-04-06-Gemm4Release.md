@@ -48,11 +48,7 @@ Gemma 4 doesn't just process text; it is **multimodal by design**.
 *   **Audio:** The smaller **E2B and E4B models** feature native audio input for speech recognition and answering questions about audio recordings.
 *   **Agentic Workflows:** With native support for **function calling** and a **thinking mode**, these models can reason step-by-step and interact with external APIs to execute complex tasks.
 
-| Capability | Description |
-|---|---|
-| 🖼️ **Vision & Video** | All models natively see images and video, excelling at OCR, chart understanding, and UI element detection. |
-| 🔊 **Audio** | The smaller E2B and E4B models feature native audio input for speech recognition and answering questions about audio recordings. |
-| 🤖 **Agentic Workflows** | With native support for function calling and a thinking mode, these models can reason step-by-step and interact with external APIs to execute complex tasks. |
+![MultiModality](/assets/img/posts/gemma4/The-Future-Is-Multimodal-Why-Single-Mode-AI-Is-Already-Obsolete.png)
 
 ---
 
