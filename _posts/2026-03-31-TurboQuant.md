@@ -53,6 +53,7 @@ After describing what these new algorithm solve, let's analyze in detail the exp
 ### **Aggregated Task Performance (LongBench)**
 
 ![Quantization](/assets/img/posts/turboquant/Quantization-2.width-1250.png)
+_Source: [TurboQuant Redefining AI efficiency with extreme compression](https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/)_
 
 Let's start with the aggregated task performance. the plot above, displays how well TurboQuant and PolarQuant perform on a variety of AI tasks such as question answering, code generation, and summarization using models like Llama-3.1-8B-Instruct.
 
@@ -76,6 +77,7 @@ The chart shows that TurboQuant has **robust performance**. This simply means th
 ### **Performance Speedup (H100 GPU Benchmarks)**
 
 ![PerformanceQuality](/assets/img/posts/turboquant/Quantization-3.width-1250.png)
+_Source: [TurboQuant Redefining AI efficiency with extreme compression](https://research.google/blog/turboquant-redefining-ai-efficiency-with-extreme-compression/)_
 
 When talking about the speedup in performance, the plot above illustrates the massive gains in processing speed when using TurboQuant compared to standard mathematical baselines like JAX.
 
