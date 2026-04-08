@@ -43,11 +43,10 @@ Google released these models in specific sizes to ensure **frontier intelligence
 ---
 
 ### **The Results: Native Multimodality and Agentic Power**
-Gemma 4 doesn't just process text; it is **multimodal by design**. 
 
 #### **Multimodality**
 
-In the context of the sources, multimodality refers to an AI model's ability to **natively process** and **understand** several different types of information—or **modalities** beyond just text. This means that instead of needing separate models for different tasks (like one for text and another for images), Gemma 4 can handle all of these inputs within a single architecture.
+In the context of the sources, multimodality refers to an AI model's ability to **natively process** and **understand** several different types of information or **modalities** beyond just text. This means that instead of needing separate models for different tasks (like one for text and another for images), Gemma 4 can handle all of these inputs within a single architecture.
 
 *   **Vision & Video:** All models natively **see** images and video, excelling at **OCR (reading text)**, chart understanding, and UI element detection.
 *   **Audio:** The smaller **E2B and E4B models** feature native audio input for speech recognition and answering questions about audio recordings.
@@ -57,12 +56,12 @@ _Source: [the-future-of-multimodal-ai](https://mcal.in/blog/the-future-of-multim
 
 #### **Agentic Workflows**
 
-With native support for **function calling** and a **thinking mode**, these models can reason step-by-step and interact with external APIs to execute complex tasks. 
+An agentic workflow is a dynamic, multi-step process that orchestrates autonomous AI agents, tools, APIs, and human-in-the-loop steps within an iterative control graph. This allows the AI to **reason step-by-step** and interact with external APIs to execute complex tasks.
 
 ---
 
 ### **An Open Ecosystem**
-In a significant win for developers, Gemma 4 is released under the **commercially permissive Apache 2.0 license**. You can access it through:
+In a significant **win** for developers, Gemma 4 is released under the **commercially permissive Apache 2.0 license**. You can access it through:
 *   **Cloud & Edge:** Recently, **Cloudflare** partnered with Google to bring the 26B MoE model to **Workers AI** for fast inference at the edge.
 *   **Day-0 Support:** It is fully integrated into **Hugging Face, llama.cpp, Ollama, and NVIDIA NIM**.
 *   **Hardware Optimized:** Built-in support for **NVIDIA, AMD, and Google Cloud TPUs** ensures it scales from a smartphone to a data center.
