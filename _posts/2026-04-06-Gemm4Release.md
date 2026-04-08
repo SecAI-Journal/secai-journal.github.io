@@ -20,7 +20,7 @@ Imagine you are trying to remember every single word of a massive 1,000-page boo
 When an AI talks to you, it uses a **Key-Value (KV) cache**, which is essentially a **digital cheat sheet** that stores the meaning of your conversation as long lists of numbers called vectors. Traditionally, these vectors are massive, and making them smaller usually meant the AI would get **fuzzier** and make more mistakes. 
 
 #### **The Solution Part 1: TurboQuant Compression**
-Google Research created **TurboQuant** to compress this memory by **6x** without losing intelligence. It uses a two-step process:
+Google Research created **TurboQuant** to compress this memory by **6x** without losing intelligence (we already have a post on this in the blog). It uses a two-step process:
 *   **PolarQuant (The Angle Trick):** Instead of a standard grid, it uses **Polar coordinates** (radius and angle). Because angles follow predictable patterns, the AI can map them to a pre-set grid, skipping expensive mathematical **cleanup** steps.
 *   **QJL (The Error Corrector):** It uses a **1-bit error-correction layer** that boils tiny leftovers down to a simple **plus or minus** bit.
 *   **The Result:** The AI's **thinking speed** becomes up to **8x faster** on high-end chips like the NVIDIA H100.
@@ -43,21 +43,25 @@ Google released these models in specific sizes to ensure **frontier intelligence
 ---
 
 ### **The Results: Native Multimodality and Agentic Power**
-Gemma 4 doesn't just process text; it is **multimodal by design**. 
+
+#### **Multimodality**
+
+In the context of the sources, multimodality refers to an AI model's ability to **natively process** and **understand** several different types of information or **modalities** beyond just text. This means that instead of needing separate models for different tasks (like one for text and another for images), Gemma 4 can handle all of these inputs within a single architecture.
+
 *   **Vision & Video:** All models natively **see** images and video, excelling at **OCR (reading text)**, chart understanding, and UI element detection.
 *   **Audio:** The smaller **E2B and E4B models** feature native audio input for speech recognition and answering questions about audio recordings.
-*   **Agentic Workflows:** With native support for **function calling** and a **thinking mode**, these models can reason step-by-step and interact with external APIs to execute complex tasks.
 
-| Capability | Description |
-|---|---|
-| 🖼️ **Vision & Video** | All models natively see images and video, excelling at OCR, chart understanding, and UI element detection. |
-| 🔊 **Audio** | The smaller E2B and E4B models feature native audio input for speech recognition and answering questions about audio recordings. |
-| 🤖 **Agentic Workflows** | With native support for function calling and a thinking mode, these models can reason step-by-step and interact with external APIs to execute complex tasks. |
+![MultiModality](/assets/img/posts/gemma4/The-Future-Is-Multimodal-Why-Single-Mode-AI-Is-Already-Obsolete.png)
+_Source: [the-future-of-multimodal-ai](https://mcal.in/blog/the-future-of-multimodal-ai/)_
+
+#### **Agentic Workflows**
+
+An agentic workflow is a dynamic, multi-step process that orchestrates autonomous AI agents, tools, APIs, and human-in-the-loop steps within an iterative control graph. This allows the AI to **reason step-by-step** and interact with external APIs to execute complex tasks.
 
 ---
 
 ### **An Open Ecosystem**
-In a significant win for developers, Gemma 4 is released under the **commercially permissive Apache 2.0 license**. You can access it through:
+In a significant **win** for developers, Gemma 4 is released under the **commercially permissive Apache 2.0 license**. You can access it through:
 *   **Cloud & Edge:** Recently, **Cloudflare** partnered with Google to bring the 26B MoE model to **Workers AI** for fast inference at the edge.
 *   **Day-0 Support:** It is fully integrated into **Hugging Face, llama.cpp, Ollama, and NVIDIA NIM**.
 *   **Hardware Optimized:** Built-in support for **NVIDIA, AMD, and Google Cloud TPUs** ensures it scales from a smartphone to a data center.
