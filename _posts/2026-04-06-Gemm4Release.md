@@ -7,7 +7,7 @@ author: [david_cardoner, secai_team]
 pin: false
 math: true
 image:
-  path: /assets/img/posts/gemma4/gemma-4_blog_keyword_header-dark.width-300.png
+  path: assets/img/posts/gemma4/Google-Gemma4-1500x843.png
 ---
 
 ### **Frontier Intelligence on Every Device: Inside the Breakthrough Architecture of Gemma 4**
@@ -65,3 +65,7 @@ In a significant **win** for developers, Gemma 4 is released under the **commerc
 *   **Cloud & Edge:** Recently, **Cloudflare** partnered with Google to bring the 26B MoE model to **Workers AI** for fast inference at the edge.
 *   **Day-0 Support:** It is fully integrated into **Hugging Face, llama.cpp, Ollama, and NVIDIA NIM**.
 *   **Hardware Optimized:** Built-in support for **NVIDIA, AMD, and Google Cloud TPUs** ensures it scales from a smartphone to a data center.
+
+---
+
+All rights reserved
