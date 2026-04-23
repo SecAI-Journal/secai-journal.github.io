@@ -105,3 +105,7 @@ By combining these two steps, TurboQuant achieves results that were previously t
 *   **No Training Needed**: Unlike other methods, you can apply this to existing AI models (like Google’s Gemma) without having to **re-teach** or fine-tune them.
 
 In short, this technology could lead to **cheaper AI services** and more powerful AI running directly on your **smartphone**, where memory is limited. It provides the efficiency of a tiny 3-bit system while maintaining the precision of a massive, heavy model.
+
+---
+
+All rights reserved

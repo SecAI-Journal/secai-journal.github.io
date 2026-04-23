@@ -6,7 +6,7 @@ categories: [Threats and Attacks]
 author: [erica_malafronte, secai_team]
 pin: false 
 image:
-  path: assets\img\posts\coverimages\RussianAttackCoverImage.jpg
+  path: assets/img/posts/coverimages/RussianAttackCoverImage.jpg
 ---
 On **March 20, 2026**, the Federal Bureau of Investigation (FBI) and the Cybersecurity and Infrastructure Security Agency (CISA) issued a joint Public Service Announcement, Alert Number **I-032026-PSA**, warning of a global espionage campaign orchestrated by the **Russian Intelligence Services (RIS)**. This operation specifically targets commercial messaging applications (CMAs), most notably Signal and WhatsApp, to gain unauthorized access to the communications of high-value individuals.
 
