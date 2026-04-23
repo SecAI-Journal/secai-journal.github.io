@@ -6,6 +6,7 @@ tags: [ai, research]
 author: [david_cardoner, secai_team]
 pin: false
 math: true
+description: Google's Gemma 4 is a family of open-source models built on Gemini 3 research, designed for advanced reasoning, multimodality, and agentic workflows on any device.
 image:
   path: assets/img/posts/gemma4/Google-Gemma4-1500x843.png
 ---
