@@ -1,5 +1,5 @@
 ---
-title: The AI Security Stack Okta, CrowdStrike, Snyk and Lakera
+title: The AI Security Stack The Four Layers of a Modern Security Posture
 date: 2026-06-09 12:00:00 +0100
 tags: [security, ai]
 categories: [Trends and Technologies]
@@ -15,14 +15,14 @@ For most of the last decade, the question "are we secure?" had a familiar shape.
 
 Then organisations started embedding **Large Language Models (LLMs)** into the core of their products and workflows, and that map stopped being complete. An AI assistant that can read your documents, call internal APIs, and act on user instructions is not just another application to scan, it is a new and fundamentally different attack surface. Inputs are natural language, behaviour is probabilistic, and the boundary between *data* and *instruction* collapses in ways traditional controls were never designed to handle.
 
-The result is a **four-layer security model** for the AI era. Each layer answers a different question, and each has a category-defining vendor that has become shorthand for the problem it solves:
+The result is a **four-layer security model** for the AI era. Each layer answers a different question, and each represents a distinct category of control that has matured into its own discipline:
 
-| Layer | Question it answers | Representative vendor |
-|-------|--------------------|----------------------|
-| **Identity** | Who is allowed in? | **Okta** |
-| **Endpoint** | What is running on our machines? | **CrowdStrike** |
-| **Code** | What are we shipping in our software? | **Snyk** |
-| **AI / LLM** | What is our model saying and doing? | **Lakera** |
+| Layer | Question it answers |
+|-------|--------------------|
+| **Identity** | Who is allowed in? |
+| **Endpoint** | What is running on our machines? |
+| **Code** | What are we shipping in our software? |
+| **AI / LLM** | What is our model saying and doing? |
 
 No single layer is sufficient on its own. A perfect identity perimeter does not help if an endpoint is already compromised; flawless endpoint protection does not matter if you ship a vulnerable dependency; and none of the first three layers can tell whether an LLM has just been talked into leaking its system prompt. This is **defense in depth**, updated for a world where one of your applications can be socially engineered.
 
@@ -30,11 +30,11 @@ Let's walk through each layer.
 
 ---
 
-## **Layer 1 Identity: Okta**
+## **Layer 1 Identity**
 
 Identity is the modern perimeter. Once an organisation moves to the cloud and SaaS, the network boundary largely dissolves, and the meaningful question becomes not *"is this request coming from inside the building?"* but *"is this actually the person they claim to be, and are they allowed to do this?"*
 
-**Okta** sits in front of applications as an identity provider, handling:
+An identity layer sits in front of applications as an identity provider, handling:
 
 - **Single Sign-On (SSO)** so users authenticate once against a central, well-defended system rather than against dozens of individually weaker logins.
 - **Multi-Factor Authentication (MFA)**, which remains one of the highest-leverage controls against credential theft and phishing.
@@ -47,11 +47,11 @@ In the AI era, identity matters *more*, not less. AI agents increasingly act on 
 
 ---
 
-## **Layer 2 Endpoint: CrowdStrike**
+## **Layer 2 Endpoint**
 
 Even with strong identity, the devices people use, laptops, servers, cloud workloads, can be compromised through malware, a malicious download, or a vulnerability exploited before a patch lands.
 
-**CrowdStrike** operates at this **endpoint** layer through its Falcon platform, providing **Endpoint Detection and Response (EDR)**. Rather than relying solely on signatures of known malware, modern EDR watches *behaviour*: a process spawning a suspicious child, a binary attempting to read credentials from memory, lateral movement across the network. When something looks like an attack in progress, it can alert, isolate the machine, and give responders the timeline they need to understand what happened.
+The **endpoint** layer addresses this through **Endpoint Detection and Response (EDR)**. Rather than relying solely on signatures of known malware, modern EDR watches *behaviour*: a process spawning a suspicious child, a binary attempting to read credentials from memory, lateral movement across the network. When something looks like an attack in progress, it can alert, isolate the machine, and give responders the timeline they need to understand what happened.
 
 The shift this layer represents is from **prevention only** to **prevention plus detection and response**. The realistic assumption is that some attacks will get through; the goal is to detect them quickly and contain the blast radius before a single compromised endpoint becomes a full breach.
 
@@ -59,11 +59,11 @@ For AI specifically, endpoints are also where models increasingly *run*. Local i
 
 ---
 
-## **Layer 3 Code: Snyk**
+## **Layer 3 Code**
 
 The third layer moves from *operating* software to *building* it. Modern applications are assembled far more than they are written from scratch: a typical service is a thin layer of original code resting on a deep tree of **open-source dependencies**, each of which can carry its own vulnerabilities.
 
-**Snyk** works at this **code** layer, integrating into the developer workflow and CI/CD pipeline to find and fix security problems *before* they ship:
+The **code** layer integrates into the developer workflow and CI/CD pipeline to find and fix security problems *before* they ship:
 
 - **SCA (Software Composition Analysis)** flagging known vulnerabilities (CVEs) in your dependencies and their transitive dependencies.
 - **SAST (Static Application Security Testing)** analysing your own source for insecure patterns.
@@ -75,13 +75,13 @@ AI raises the stakes here in two directions. First, a large and growing share of
 
 ---
 
-## **Layer 4 AI / LLM: Lakera**
+## **Layer 4 AI / LLM**
 
 The first three layers are mature, well-understood, and broadly deployed. The fourth is the one the previous decade's stack simply does not cover, and it is where AI changes the rules.
 
 Once an LLM is embedded in an application, with access to data, tools, and the ability to take actions, it becomes a target in its own right. The core problem is **prompt injection**: because the model processes instructions and data through the same natural-language channel, an attacker can hide instructions inside content the model reads (a document, a web page, an email) and hijack its behaviour. There is no clean syntactic boundary to enforce, the way there is between SQL code and SQL data.
 
-**Lakera** operates at this **AI / LLM** layer, acting as a guardrail between users, untrusted content, and the model. Broadly, it aims to:
+The **AI / LLM** layer acts as a guardrail between users, untrusted content, and the model. Broadly, it aims to:
 
 - **Detect and block prompt injection and jailbreak attempts** before they reach the model or before the model acts on them.
 - **Filter sensitive data** preventing PII, secrets, or proprietary information from leaking out through model outputs.
@@ -98,12 +98,12 @@ This maps directly onto the **[OWASP Top 10 for LLM Applications](https://owasp.
 
 The four layers are not independent products bolted side by side, they are a chain, and an attacker only needs the weakest link:
 
-1. **Okta** decides *who* gets in.
-2. **CrowdStrike** watches *what runs* on the machines once they are in.
-3. **Snyk** governs *what you ship* into those machines.
-4. **Lakera** controls *what your AI says and does* once it is live.
+1. **Identity** decides *who* gets in.
+2. **Endpoint** watches *what runs* on the machines once they are in.
+3. **Code** governs *what you ship* into those machines.
+4. **AI / LLM** controls *what your AI says and does* once it is live.
 
-Picture a single realistic attack path. A phished credential (defended by **identity**) lands on a laptop, where malware tries to establish persistence (caught by the **endpoint** layer). The same organisation ships a service with a vulnerable dependency (flagged at the **code** layer) that exposes an AI assistant, which an attacker then attempts to manipulate via a malicious document (blocked at the **AI** layer). Remove any one control and the path opens up. That is what defense in depth means in practice, and it is why "are we secure?" is never a single-vendor question.
+Picture a single realistic attack path. A phished credential (defended by **identity**) lands on a laptop, where malware tries to establish persistence (caught by the **endpoint** layer). The same organisation ships a service with a vulnerable dependency (flagged at the **code** layer) that exposes an AI assistant, which an attacker then attempts to manipulate via a malicious document (blocked at the **AI** layer). Remove any one control and the path opens up. That is what defense in depth means in practice, and it is why "are we secure?" is never a single-control question.
 
 The genuinely new insight is the fourth layer. For years, three categories, identity, endpoint, and code, were a reasonable approximation of a complete posture. The moment LLMs gained access to data and the ability to act, a fourth became non-negotiable. An AI application is the first piece of software in your stack that can be *socially engineered*, and none of the older layers were designed to defend against persuasion.
 
@@ -112,11 +112,11 @@ A complete security posture in the AI era therefore covers all four:
 > **Identity → Endpoint → Code → AI.** Who gets in, what runs, what ships, and what the model does. Miss any one, and the stack has a hole.
 {: .prompt-tip }
 
-The specific vendor names will change, and they are used here as shorthand for categories rather than endorsements. The *layers*, however, are durable. Whatever tools you choose, the questions they answer are the ones every organisation deploying AI now has to answer for itself.
+Each layer has its own mature category of tooling, and the market offers strong options for all four, but the specific products you choose matter less than the questions they answer. The *layers* are durable. Whatever tools you adopt, these are the four questions every organisation deploying AI now has to answer for itself.
 
 ---
 
-*This article maps security categories to representative vendors for illustration; it is not an endorsement of any specific product. Information is accurate as of 9 June 2026.*
+*This article describes security categories and the questions they address; it is not an endorsement of any specific product or vendor. Information is accurate as of 9 June 2026.*
 
 ---
 
