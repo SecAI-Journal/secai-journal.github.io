@@ -18,6 +18,9 @@
     </filter>
   </defs>
 
+  <!-- full-canvas background so square margins are not transparent -->
+  <rect width="1500" height="1500" fill="url(#bg)"/>
+
   <!-- banner band centered in 1500x1500 (y 450..1050) -->
   <g transform="translate(0,450)">
     <!-- background -->
@@ -51,32 +54,28 @@
         <circle cx="130" cy="301" r="9" fill="#1fb6ff" filter="url(#soft)"/>
         <circle cx="130" cy="301" r="6" fill="#bfe9ff"/>
         <text x="165" y="310" font-size="26" font-weight="600" fill="#eaf6ff">Identity</text>
-        <text x="360" y="310" font-size="20" fill="#86a9c9">Who is allowed in?</text>
-        <text x="1380" y="310" font-size="22" font-weight="600" fill="#5fd0ff" text-anchor="end">Okta</text>
+        <text x="1380" y="310" font-size="20" fill="#86a9c9" text-anchor="end">Who is allowed in?</text>
       </g>
       <g>
         <rect x="90" y="345" width="1320" height="62" rx="10" fill="url(#layerFill)" stroke="#1fb6ff" stroke-opacity="0.55" stroke-width="1.5"/>
         <circle cx="130" cy="376" r="9" fill="#1fb6ff" filter="url(#soft)"/>
         <circle cx="130" cy="376" r="6" fill="#bfe9ff"/>
         <text x="165" y="385" font-size="26" font-weight="600" fill="#eaf6ff">Endpoint</text>
-        <text x="360" y="385" font-size="20" fill="#86a9c9">What is running on our machines?</text>
-        <text x="1380" y="385" font-size="22" font-weight="600" fill="#5fd0ff" text-anchor="end">CrowdStrike</text>
+        <text x="1380" y="385" font-size="20" fill="#86a9c9" text-anchor="end">What is running on our machines?</text>
       </g>
       <g>
         <rect x="90" y="420" width="1320" height="62" rx="10" fill="url(#layerFill)" stroke="#1fb6ff" stroke-opacity="0.55" stroke-width="1.5"/>
         <circle cx="130" cy="451" r="9" fill="#1fb6ff" filter="url(#soft)"/>
         <circle cx="130" cy="451" r="6" fill="#bfe9ff"/>
         <text x="165" y="460" font-size="26" font-weight="600" fill="#eaf6ff">Code</text>
-        <text x="360" y="460" font-size="20" fill="#86a9c9">What are we shipping in our software?</text>
-        <text x="1380" y="460" font-size="22" font-weight="600" fill="#5fd0ff" text-anchor="end">Snyk</text>
+        <text x="1380" y="460" font-size="20" fill="#86a9c9" text-anchor="end">What are we shipping in our software?</text>
       </g>
       <g>
         <rect x="90" y="495" width="1320" height="62" rx="10" fill="#0c3a4a" stroke="#33e0ff" stroke-opacity="0.9" stroke-width="2"/>
         <circle cx="130" cy="526" r="10" fill="#33e0ff" filter="url(#soft)"/>
         <circle cx="130" cy="526" r="6" fill="#e6fbff"/>
         <text x="165" y="535" font-size="26" font-weight="700" fill="#eaffff">AI / LLM</text>
-        <text x="360" y="535" font-size="20" fill="#9fe6f5">What is our model saying and doing?</text>
-        <text x="1380" y="535" font-size="22" font-weight="700" fill="#7df0ff" text-anchor="end">Lakera</text>
+        <text x="1380" y="535" font-size="20" fill="#9fe6f5" text-anchor="end">What is our model saying and doing?</text>
       </g>
     </g>
   </g>
