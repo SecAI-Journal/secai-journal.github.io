@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#0a1830"/>
+      <stop offset="1" stop-color="#040a18"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3ee3ff"/>
+      <stop offset="1" stop-color="#1c9fe6"/>
+    </linearGradient>
+    <linearGradient id="cyanTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="0.5" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#1fb6ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#1fb6ff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="hatch" width="12" height="12" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="12" height="12" fill="#1a1206"/>
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#ff8a3c" stroke-opacity="0.28" stroke-width="4"/>
+    </pattern>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="598" rx="20" fill="url(#bg)" stroke="#1a3a5c" stroke-opacity="0.5" stroke-width="1.5"/>
+  <ellipse cx="980" cy="110" rx="360" ry="200" fill="url(#glow)"/>
+
+  <!-- header -->
+  <text x="64" y="78" font-size="32" font-weight="700" fill="#eaf6ff">Preemption is a reset, not a pause</text>
+  <text x="64" y="114" font-size="19" fill="#7fb6e6" letter-spacing="0.5">One line of the scheduler discards finished work</text>
+
+  <!-- ===== BEFORE: 80% computed (y 190-248) ===== -->
+  <text x="64" y="182" font-size="19" font-weight="600" fill="#aecbe6">Request A &#183; mid-flight</text>
+  <text x="1136" y="182" font-size="18" fill="#5f86a8" text-anchor="end">KV cache populated</text>
+  <g>
+    <rect x="64" y="190" width="1072" height="58" rx="14" fill="#0b1a30" stroke="#22405f" stroke-width="1.5"/>
+    <rect x="64" y="190" width="858" height="58" rx="14" fill="url(#cyan)"/>
+    <rect x="64" y="190" width="858" height="29" rx="14" fill="url(#cyanTop)"/>
+    <text x="92" y="226" font-size="22" font-weight="700" fill="#04263a">8,000 / 10,000 tokens computed</text>
+  </g>
+
+  <!-- ===== PREEMPT zone: arrow (288-318) then pill (334-386), clear gaps ===== -->
+  <g transform="translate(600,288)">
+    <path d="M -14 0 L 0 15 L 14 0" fill="none" stroke="#ff7a4d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M -14 15 L 0 30 L 14 15" fill="none" stroke="#ff7a4d" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  </g>
+  <g transform="translate(600,334)">
+    <rect x="-300" y="0" width="600" height="52" rx="26" fill="#2a0d0a" stroke="#ff6b3d" stroke-width="2"/>
+    <circle cx="-262" cy="26" r="7" fill="#ff6b3d"/>
+    <text x="-240" y="34" font-size="20" font-weight="700" fill="#ffd9c7">PREEMPT</text>
+    <text x="-128" y="34" font-size="19" fill="#f0b49a" font-family="Consolas, Menlo, monospace">num_computed_tokens = 0</text>
+  </g>
+
+  <!-- ===== AFTER: 0%, ghost of wasted work (y 470-528) ===== -->
+  <text x="64" y="462" font-size="19" font-weight="600" fill="#aecbe6">Request A &#183; resumed</text>
+  <text x="1136" y="462" font-size="18" fill="#c47a52" text-anchor="end">8,000 tokens redone</text>
+  <g>
+    <rect x="64" y="470" width="1072" height="58" rx="14" fill="#0b1a30" stroke="#ff8a3c" stroke-width="1.5" stroke-dasharray="10 8"/>
+    <rect x="66" y="472" width="854" height="54" rx="12" fill="url(#hatch)" opacity="0.9"/>
+    <text x="92" y="506" font-size="22" font-weight="700" fill="#ffb160">0 / 10,000 tokens &#183; recompute from scratch</text>
+  </g>
+
+  <text x="64" y="570" font-size="17" fill="#6f93b4">Force memory pressure and every preemption becomes duplicated GPU work.</text>
+</svg>
