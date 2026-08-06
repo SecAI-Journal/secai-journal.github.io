@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1500" viewBox="0 0 1500 1500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#020817"/>
+      <stop offset="0.55" stop-color="#061229"/>
+      <stop offset="1" stop-color="#010409"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#1fb6ff" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#1fb6ff" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowWarn" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ff8a3c" stop-opacity="0.5"/>
+      <stop offset="1" stop-color="#ff8a3c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="blockFill" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0e2a4d"/>
+      <stop offset="1" stop-color="#071a33"/>
+    </linearGradient>
+    <linearGradient id="hitBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#33e0ff"/>
+      <stop offset="1" stop-color="#1fb6ff"/>
+    </linearGradient>
+    <linearGradient id="missBar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffb160"/>
+      <stop offset="1" stop-color="#ff6b3d"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6"/>
+    </filter>
+  </defs>
+
+  <!-- full-canvas background so square margins are not transparent -->
+  <rect width="1500" height="1500" fill="url(#bg)"/>
+
+  <!-- banner band centered in 1500x1500 (y 450..1050) -->
+  <g transform="translate(0,450)">
+    <rect width="1500" height="600" fill="url(#bg)"/>
+
+    <!-- faint grid -->
+    <g stroke="#1a3a5c" stroke-opacity="0.18" stroke-width="1">
+      <line x1="0" y1="120" x2="1500" y2="120"/>
+      <line x1="0" y1="240" x2="1500" y2="240"/>
+      <line x1="0" y1="360" x2="1500" y2="360"/>
+      <line x1="0" y1="480" x2="1500" y2="480"/>
+      <line x1="250" y1="0" x2="250" y2="600"/>
+      <line x1="500" y1="0" x2="500" y2="600"/>
+      <line x1="750" y1="0" x2="750" y2="600"/>
+      <line x1="1000" y1="0" x2="1000" y2="600"/>
+      <line x1="1250" y1="0" x2="1250" y2="600"/>
+    </g>
+
+    <!-- ambient glows -->
+    <ellipse cx="1180" cy="150" rx="380" ry="240" fill="url(#glow)"/>
+    <ellipse cx="230" cy="520" rx="320" ry="220" fill="url(#glowWarn)" opacity="0.6"/>
+
+    <!-- title -->
+    <text x="90" y="150" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="58" font-weight="700" fill="#eaf6ff">Prefix Cache = Prompt Leak</text>
+    <text x="92" y="200" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="26" font-weight="400" fill="#7fb6e6" letter-spacing="2">A TIMING SIDE-CHANNEL IN LLM SERVING</text>
+
+    <!-- shared KV-cache blocks: first three shared (cyan), last one private (dashed) -->
+    <g font-family="Consolas, Menlo, monospace">
+      <text x="90" y="290" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#86a9c9" letter-spacing="1">CONTENT-ADDRESSED KV BLOCKS</text>
+      <g>
+        <rect x="90"  y="308" width="200" height="72" rx="10" fill="url(#blockFill)" stroke="#33e0ff" stroke-opacity="0.9" stroke-width="2"/>
+        <rect x="310" y="308" width="200" height="72" rx="10" fill="url(#blockFill)" stroke="#33e0ff" stroke-opacity="0.9" stroke-width="2"/>
+        <rect x="530" y="308" width="200" height="72" rx="10" fill="url(#blockFill)" stroke="#33e0ff" stroke-opacity="0.9" stroke-width="2"/>
+        <rect x="750" y="308" width="200" height="72" rx="10" fill="#0c1f14" stroke="#ff8a3c" stroke-opacity="0.85" stroke-width="2" stroke-dasharray="8 6"/>
+        <text x="190" y="352" font-size="24" fill="#bfe9ff" text-anchor="middle">SYSTEM:</text>
+        <text x="410" y="352" font-size="24" fill="#bfe9ff" text-anchor="middle">the PIN</text>
+        <text x="630" y="352" font-size="24" fill="#bfe9ff" text-anchor="middle">is</text>
+        <text x="850" y="352" font-size="24" fill="#ffb160" text-anchor="middle">????</text>
+        <text x="90" y="410" font-size="18" fill="#5f86a8" font-family="Segoe UI, Helvetica, Arial, sans-serif">shared across tenants (same tokens, same hash)</text>
+      </g>
+    </g>
+
+    <!-- TTFT oracle: HIT fast vs MISS slow -->
+    <g font-family="Segoe UI, Helvetica, Arial, sans-serif">
+      <text x="90" y="435" font-size="20" fill="#86a9c9" letter-spacing="1">TTFT ORACLE</text>
+
+      <!-- HIT: short cyan bar -->
+      <rect x="300" y="452" width="200" height="26" rx="6" fill="url(#hitBar)"/>
+      <text x="90"  y="472" font-size="22" font-weight="600" fill="#9fe6f5">cache HIT</text>
+      <text x="520" y="472" font-size="20" fill="#9fe6f5">fast &#8594; "someone sent this"</text>
+
+      <!-- MISS: long amber bar -->
+      <rect x="300" y="500" width="560" height="26" rx="6" fill="url(#missBar)"/>
+      <text x="90"  y="520" font-size="22" font-weight="600" fill="#ffb160">cache MISS</text>
+      <text x="880" y="520" font-size="20" fill="#ffb160">slow &#8594; prefill ran</text>
+    </g>
+  </g>
+</svg>
